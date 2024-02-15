@@ -8,22 +8,31 @@
 import Foundation
 import UIKit
 
+protocol VideoCallToolsViewDelegate: AnyObject {
+    func speakerButtonTapped()
+    func videoCamButtonTapped()
+    func volumeButtonTapped()
+    func messageButtonTapped()
+}
+
 class VideoCallToolsView: UIView {
     
+    weak var delegate: VideoCallToolsViewDelegate?
+    
     lazy var speakerButton: UIButton = {
-        return createButton(imageName: "mic.fill")
+        return createButton(imageName: "mic.fill", action: #selector(speakerButtonTapped))
     }()
     
     lazy var videoCamButton: UIButton = {
-        return createButton(imageName: "video.fill")
+        return createButton(imageName: "video.fill", action: #selector(videoCamButtonTapped))
     }()
     
     lazy var volumeButton: UIButton = {
-        return createButton(imageName: "speaker.slash")
+        return createButton(imageName: "speaker.slash", action: #selector(volumeButtonTapped))
     }()
     
     lazy var messageButton: UIButton = {
-        return createButton(imageName: "ellipsis.message.fill")
+        return createButton(imageName: "ellipsis.message.fill", action: #selector(messageButtonTapped))
     }()
     
     override init(frame: CGRect) {
@@ -102,10 +111,29 @@ class VideoCallToolsView: UIView {
         )
     }
     
-    private func createButton(imageName: String) -> UIButton {
+    private func createButton(imageName: String, action: Selector?) -> UIButton {
         let button = UIButton()
         button.setImage(UIImage(named: imageName), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        if let action = action {
+            button.addTarget(self, action: action, for: .touchUpInside)
+        }
         return button
+    }
+    
+    @objc private func speakerButtonTapped() {
+        delegate?.speakerButtonTapped()
+    }
+    
+    @objc private func videoCamButtonTapped() {
+        delegate?.videoCamButtonTapped()
+    }
+    
+    @objc private func volumeButtonTapped() {
+        delegate?.volumeButtonTapped()
+    }
+    
+    @objc private func messageButtonTapped() {
+        delegate?.messageButtonTapped()
     }
 }
