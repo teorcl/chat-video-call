@@ -16,6 +16,7 @@
 		848EC3622B7C02A200C933C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EC3612B7C02A200C933C4 /* ContentView.swift */; };
 		848EC3642B7C035F00C933C4 /* VideoCallToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EC3632B7C035F00C933C4 /* VideoCallToolsView.swift */; };
 		848EC3662B7C1A3200C933C4 /* CallEndButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EC3652B7C1A3200C933C4 /* CallEndButton.swift */; };
+		848EC36A2B7D479400C933C4 /* VideoCallPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EC3692B7D479400C933C4 /* VideoCallPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		848EC3612B7C02A200C933C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		848EC3632B7C035F00C933C4 /* VideoCallToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallToolsView.swift; sourceTree = "<group>"; };
 		848EC3652B7C1A3200C933C4 /* CallEndButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallEndButton.swift; sourceTree = "<group>"; };
+		848EC3692B7D479400C933C4 /* VideoCallPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				848EC3612B7C02A200C933C4 /* ContentView.swift */,
 				848EC3632B7C035F00C933C4 /* VideoCallToolsView.swift */,
 				848EC3652B7C1A3200C933C4 /* CallEndButton.swift */,
+				848EC3692B7D479400C933C4 /* VideoCallPreview.swift */,
 			);
 			path = VideoCall;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				848EC34A2B7BD1B300C933C4 /* AppDelegate.swift in Sources */,
 				848EC3602B7BD87200C933C4 /* ControllersVideoCallView.swift in Sources */,
 				848EC3662B7C1A3200C933C4 /* CallEndButton.swift in Sources */,
+				848EC36A2B7D479400C933C4 /* VideoCallPreview.swift in Sources */,
 				848EC34C2B7BD1B400C933C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

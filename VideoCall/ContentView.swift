@@ -10,16 +10,6 @@ import UIKit
 
 class ContentView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
-    }
-    
     lazy var videoCallToolsView: VideoCallToolsView = {
        let videoCallToolsView = VideoCallToolsView()
         videoCallToolsView.layer.masksToBounds = true
@@ -33,6 +23,22 @@ class ContentView: UIView {
         callEndButton.translatesAutoresizingMaskIntoConstraints = false
         return callEndButton
     }()
+    
+    lazy var videoCallPreview: VideoCallPreview = {
+        let videoCallPreview = VideoCallPreview()
+        videoCallPreview.translatesAutoresizingMaskIntoConstraints = false
+        return videoCallPreview
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -48,11 +54,13 @@ class ContentView: UIView {
     private func addSubViews(){
         self.addSubview(videoCallToolsView)
         self.addSubview(callEndButton)
+        self.addSubview(videoCallPreview)
     }
     
     private func addConstraints(){
         videoCallToolsViewConstraints()
         callEndButtonConstraints()
+        videoCallPreviewConstraints()
     }
     
     private func videoCallToolsViewConstraints(){
@@ -73,6 +81,23 @@ class ContentView: UIView {
                 callEndButton.centerYAnchor.constraint(equalTo: videoCallToolsView.centerYAnchor,constant: -30),
                 callEndButton.widthAnchor.constraint(equalToConstant: 60),
                 callEndButton.heightAnchor.constraint(equalToConstant: 60),
+            ]
+        )
+    }
+    
+    private func videoCallPreviewConstraints(){
+        let width = bounds.width
+        let height = bounds.height
+        NSLayoutConstraint.activate(
+            [
+                videoCallPreview.topAnchor.constraint(
+                    equalTo: safeAreaLayoutGuide.topAnchor,constant: 10
+                ),
+                videoCallPreview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
+                
+                videoCallPreview.widthAnchor.constraint(equalToConstant: 140),
+                videoCallPreview.heightAnchor.constraint(equalToConstant: 230),
+                
             ]
         )
     }
