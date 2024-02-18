@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840B92062B801736009C2DB6 /* ContentChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B92052B801736009C2DB6 /* ContentChatView.swift */; };
+		840B920A2B801898009C2DB6 /* BubbleChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B92092B801898009C2DB6 /* BubbleChatView.swift */; };
+		840B920D2B801E7E009C2DB6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B920C2B801E7E009C2DB6 /* ChatViewController.swift */; };
+		840B920F2B811FB0009C2DB6 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B920E2B811FB0009C2DB6 /* CustomCollectionViewCell.swift */; };
+		840B92112B812104009C2DB6 /* PageChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B92102B812104009C2DB6 /* PageChatVC.swift */; };
+		840B92132B812FF0009C2DB6 /* RightAlignedCustomCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B92122B812FF0009C2DB6 /* RightAlignedCustomCVCell.swift */; };
 		848EC34A2B7BD1B300C933C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EC3492B7BD1B300C933C4 /* AppDelegate.swift */; };
 		848EC34C2B7BD1B400C933C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EC34B2B7BD1B400C933C4 /* SceneDelegate.swift */; };
 		848EC34E2B7BD1B400C933C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EC34D2B7BD1B400C933C4 /* ViewController.swift */; };
@@ -20,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840B92052B801736009C2DB6 /* ContentChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChatView.swift; sourceTree = "<group>"; };
+		840B92092B801898009C2DB6 /* BubbleChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatView.swift; sourceTree = "<group>"; };
+		840B920C2B801E7E009C2DB6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		840B920E2B811FB0009C2DB6 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		840B92102B812104009C2DB6 /* PageChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageChatVC.swift; sourceTree = "<group>"; };
+		840B92122B812FF0009C2DB6 /* RightAlignedCustomCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAlignedCustomCVCell.swift; sourceTree = "<group>"; };
 		848EC3462B7BD1B300C933C4 /* VideoCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848EC3492B7BD1B300C933C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848EC34B2B7BD1B400C933C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +57,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840B92042B8016E8009C2DB6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				840B920B2B801E58009C2DB6 /* UI */,
+				840B920C2B801E7E009C2DB6 /* ChatViewController.swift */,
+				840B92102B812104009C2DB6 /* PageChatVC.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		840B920B2B801E58009C2DB6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				840B92052B801736009C2DB6 /* ContentChatView.swift */,
+				840B92092B801898009C2DB6 /* BubbleChatView.swift */,
+				840B920E2B811FB0009C2DB6 /* CustomCollectionViewCell.swift */,
+				840B92122B812FF0009C2DB6 /* RightAlignedCustomCVCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		848EC33D2B7BD1B300C933C4 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +97,7 @@
 		848EC3482B7BD1B300C933C4 /* VideoCall */ = {
 			isa = PBXGroup;
 			children = (
+				840B92042B8016E8009C2DB6 /* Chat */,
 				848EC3492B7BD1B300C933C4 /* AppDelegate.swift */,
 				848EC34B2B7BD1B400C933C4 /* SceneDelegate.swift */,
 				848EC34D2B7BD1B400C933C4 /* ViewController.swift */,
@@ -149,14 +183,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840B92062B801736009C2DB6 /* ContentChatView.swift in Sources */,
 				848EC3642B7C035F00C933C4 /* VideoCallToolsView.swift in Sources */,
+				840B920D2B801E7E009C2DB6 /* ChatViewController.swift in Sources */,
 				848EC34E2B7BD1B400C933C4 /* ViewController.swift in Sources */,
 				848EC3622B7C02A200C933C4 /* ContentView.swift in Sources */,
 				848EC34A2B7BD1B300C933C4 /* AppDelegate.swift in Sources */,
 				848EC3602B7BD87200C933C4 /* ControllersVideoCallView.swift in Sources */,
+				840B920F2B811FB0009C2DB6 /* CustomCollectionViewCell.swift in Sources */,
+				840B920A2B801898009C2DB6 /* BubbleChatView.swift in Sources */,
 				848EC3662B7C1A3200C933C4 /* CallEndButton.swift in Sources */,
 				848EC36A2B7D479400C933C4 /* VideoCallPreview.swift in Sources */,
+				840B92112B812104009C2DB6 /* PageChatVC.swift in Sources */,
 				848EC34C2B7BD1B400C933C4 /* SceneDelegate.swift in Sources */,
+				840B92132B812FF0009C2DB6 /* RightAlignedCustomCVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
